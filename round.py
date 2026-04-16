@@ -91,5 +91,5 @@ def play_round(player_name, balance):
         print(f"{player_name} loses {bet}.")
         return balance - bet
 
-    print("Draw.")
+    print("Draw...")
     return balance

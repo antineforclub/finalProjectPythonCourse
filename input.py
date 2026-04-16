@@ -13,7 +13,7 @@ def get_deposit():
             deposit = int(raw)
             if deposit > 0:
                 return deposit
-            print("Deposit must be greater than 0.")
+            print("Deposit must be greater than 0...")
         except ValueError:
             print("Please enter an integer.")
 

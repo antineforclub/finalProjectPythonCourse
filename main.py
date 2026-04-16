@@ -13,7 +13,7 @@ def main():
         print(f"\n{player_name}'s balance: {balance}")
 
         if balance <= 0:
-            print("You don't have enough money. Game over.")
+            print("You don't have enough money. Game over...")
             break
 
         if not input.ask_continue():
