@@ -1,26 +1,25 @@
 import round
 import input
-import cards
 
 
 def main():
     print("=== BLACKJACK ===")
-    player_name = get_player_name()
-    balance = get_deposit()
+    player_name = input.get_player_name()
+    balance = input.get_deposit()
 
     while balance > 0:
         print("\n==============================")
-        balance = play_round(player_name, balance)
-        print(f"\nPlayer's balance {player_name}: {balance}")
+        balance = round.play_round(player_name, balance)
+        print(f"\n{player_name}'s balance: {balance}")
 
         if balance <= 0:
-            print("You don't have enough money. Game is over...")
+            print("You don't have enough money. Game over.")
             break
 
-        if not ask_continue():
+        if not input.ask_continue():
             break
 
-    print(f"\nThank you for your game, {player_name}. Final balance: {balance}")
+    print(f"\nThank you for playing, {player_name}. Final balance: {balance}")
 
 
 if __name__ == "__main__":
